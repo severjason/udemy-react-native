@@ -10,7 +10,7 @@ export default class App extends React.Component {
 
   handlePlaceNameChange = val =>
 		this.setState({
-			placeName: val
+			placeName: val,
 		});
 
   handlePlaceSubmit = () => {
