@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/sever/www/localhost/react_native/udemy/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml",
+            "outputFile": "/home/user/www/udemy-react-native/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml",
             "map": [
                 {
-                    "source": "/home/sever/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/373c80fe8a413c95cc56dec5f8d203e2/res/values-ca/values-ca.xml",
+                    "source": "/home/user/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f059a7ba5527e3c17fd1e0682d2f806a/res/values-ca/values-ca.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

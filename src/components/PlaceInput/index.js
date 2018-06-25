@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 		width: "70%",
 	},
 	placeButton: {
-		width: "30&",
+		width: "30%",
 	}
 });
 

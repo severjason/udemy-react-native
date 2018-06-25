@@ -1,4 +1,4 @@
-#Sun Jun 24 16:55:13 EEST 2018
-base.0=/home/sever/www/localhost/react_native/udemy/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Mon Jun 25 16:29:04 EEST 2018
+base.0=/home/user/www/udemy-react-native/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
 path.0=classes.dex
