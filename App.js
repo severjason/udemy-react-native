@@ -6,26 +6,19 @@ import placeImage from './src/assets/1.jpeg';
 
 export default class App extends React.Component {
   state = {
-    placeName:'',
     places: [],
     selectedPlace: null,
   };
 
-  handlePlaceNameChange = val =>
-		this.setState({
-			placeName: val,
-		});
-
-  handlePlaceSubmit = () => {
-    if (this.state.placeName.trim() === "") {
+  handlePlaceSubmit = (placeName) => {
+    if (placeName.trim() === "") {
       return;
     }
     this.setState(prevState => {
       return {
-        placeName: "",
         places: prevState.places.concat({
           key: uuid.v4(),
-          name: prevState.placeName,
+          name: placeName,
           image: {
             uri: "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350",
           }
@@ -64,9 +57,7 @@ export default class App extends React.Component {
           onModalClosed={this.handleModalClose}
         />
         <PlaceInput
-          placeName={this.state.placeName}
           onPress={this.handlePlaceSubmit}
-          onChangeText={this.handlePlaceNameChange}
         />
         <List
           places={this.state.places}
