@@ -1,12 +1,14 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { List, PlaceInput } from './src/components/';
+import { List, PlaceInput, PlaceDetail } from './src/components/';
 import uuid from 'uuid';
+import placeImage from './src/assets/1.jpeg';
 
 export default class App extends React.Component {
   state = {
     placeName:'',
-    places: []
+    places: [],
+    selectedPlace: null,
   };
 
   handlePlaceNameChange = val =>
@@ -21,22 +23,46 @@ export default class App extends React.Component {
     this.setState(prevState => {
       return {
         placeName: "",
-        places: prevState.places.concat({key: uuid.v4(), value: prevState.placeName})
+        places: prevState.places.concat({
+          key: uuid.v4(),
+          name: prevState.placeName,
+          image: {
+            uri: "https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350",
+          }
+        })
       }
     })
   };
 
-  handleItemDelete = key => {
+  handleItemSelected = key => {
     this.setState(prevState => {
       return {
-        places: prevState.places.filter(place => place.key !== key),
+        selectedPlace: prevState.places.find(place => place.key === key),
       }
-    })
+    });
+  };
+
+  handleItemDeleted = () => {
+    this.setState(prevState => {
+      return {
+        places: prevState.places.filter(place => place.key !== prevState.selectedPlace.key),
+        selectedPlace: null,
+      }
+    });
+  };
+
+  handleModalClose = () => {
+    this.setState({selectedPlace: null});
   };
 
   render() {
     return (
       <View style={styles.container}>
+        <PlaceDetail
+          selectedPlace={this.state.selectedPlace}
+          onItemDeleted={this.handleItemDeleted}
+          onModalClosed={this.handleModalClose}
+        />
         <PlaceInput
           placeName={this.state.placeName}
           onPress={this.handlePlaceSubmit}
@@ -44,7 +70,7 @@ export default class App extends React.Component {
         />
         <List
           places={this.state.places}
-          onDeleteItem={this.handleItemDelete}
+          onItemSelected={this.handleItemSelected}
         />
       </View>
     );
