@@ -11,7 +11,7 @@ export const addPlace = (placeName) => {
 
 export const deletePlace = () => {
   return {
-    type: DESELECT_PLACE,
+    type: DELETE_PLACE,
   }
 };
 

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Jun 25 16:29:04 EEST 2018
+#Wed Jun 27 09:58:54 EEST 2018
 23.set=NATIVE_RESOURCE
 2.base=/home/user/www/udemy-react-native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 15.set=NATIVE_RESOURCE

@@ -4,7 +4,7 @@
             "outputFile": "/home/user/www/udemy-react-native/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f059a7ba5527e3c17fd1e0682d2f806a/res/values-v14/values-v14.xml",
+                    "source": "/home/user/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/76c75241ce1f2c533aea962f34e4ed60/res/values-v14/values-v14.xml",
                     "from": {
                         "startLines": "4,11,12,13,19,27,28,29,32,33",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
